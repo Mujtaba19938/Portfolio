@@ -455,6 +455,72 @@ export default function ProjectDetail() {
         ],
       },
       {
+        id: 23,
+        title: "Purple.design",
+        description: "A minimal hero landing page with a neural canvas — crisp, elegant, and quietly expressive. Built with React, Three.js, and a custom CPPN shader.",
+        image: "/Screenshot 2025-12-07 174705.png",
+        tags: ["React-JS"],
+        categories: ["Website", "Design"],
+        demoLink: "https://purple-web-xi.vercel.app",
+        githubLink: "#",
+        longDescription:
+          "Purple.design is a stunning, minimal hero landing page that transforms website design into art. The page features a mesmerizing neural canvas background created with Three.js and a custom CPPN (Compositional Pattern-Producing Network) shader, producing organic, flowing visual effects. The design showcases crisp typography, elegant layouts, and a quietly expressive aesthetic that demonstrates the intersection of creative coding and modern web design.",
+        features: [
+          "Neural canvas background with custom CPPN shader",
+          "Elegant dark theme with purple gradient accents",
+          "Minimal and expressive hero section design",
+          "Smooth navigation with pill-style active states",
+          "Call-to-action buttons with modern styling",
+          "Responsive layout for all devices",
+          "Interactive 3D visual effects",
+          "Showcase section for design portfolio",
+        ],
+        technologies: [
+          "React for component-based UI development",
+          "Three.js for 3D graphics and WebGL rendering",
+          "Custom CPPN shader for neural canvas effects",
+          "Tailwind CSS for styling",
+          "Framer Motion for animations",
+          "Next.js for server-side rendering",
+          "TypeScript for type safety",
+          "Modern CSS for gradients and effects",
+        ],
+      },
+      {
+        id: 24,
+        title: "Watchhub",
+        description: "A premium luxury watch e-commerce mobile app with elegant dark theme, featuring timepiece browsing, wishlist, and shopping cart functionality.",
+        image: "/Screenshot 2025-12-14 120823.png",
+        tags: ["Flutter"],
+        categories: ["Mobile App", "E-commerce"],
+        demoLink: "#",
+        githubLink: "#",
+        longDescription:
+          "Watchhub is a sophisticated luxury watch e-commerce mobile application built with Flutter. The app features an elegant dark theme with gold accents, providing a premium shopping experience for luxury timepiece enthusiasts. Users can browse featured watches from prestigious brands like Rolex, Omega, and TAG Heuer, explore categories, manage wishlists, and complete purchases through an intuitive interface designed for watch connoisseurs.",
+        features: [
+          "Elegant dark theme with gold accent colors",
+          "Featured timepieces showcase with pricing",
+          "Watch categories (Dress, Diver, Pilot, Chrono)",
+          "Search functionality for finding specific watches",
+          "Wishlist management for saving favorites",
+          "Shopping cart for seamless checkout",
+          "User profile and personalized greeting",
+          "Bottom navigation for easy app navigation",
+          "High-quality watch imagery and details",
+          "Notification system for deals and updates",
+        ],
+        technologies: [
+          "Flutter for cross-platform mobile development",
+          "Dart programming language",
+          "Material Design components",
+          "Custom UI widgets for watch cards",
+          "State management for cart and wishlist",
+          "Responsive layout for various screen sizes",
+          "Custom animations and transitions",
+          "Local storage for user preferences",
+        ],
+      },
+      {
         id: 18,
         title: "Reboost Social Media Agency",
         description: "A modern social media management and creative agency website with dark theme design and interactive elements.",
@@ -668,7 +734,9 @@ export default function ProjectDetail() {
                 project.id === 16 ||
                 project.id === 17 ||
                 project.id === 18 ||
-                project.id === 19 ? (
+                project.id === 19 ||
+                project.id === 22 ||
+                project.id === 23 ? (
                   // Special handling for projects with live demos
                   <a
                     href={project.demoLink}

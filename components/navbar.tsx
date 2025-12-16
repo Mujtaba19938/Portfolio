@@ -77,7 +77,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed w-full z-50 transition-all duration-300 ${
+      className={`fixed w-full z-50 transition-all duration-300 text-[rgb(var(--foreground-rgb))] ${
         scrolled ? "bg-[var(--navbar-bg)] backdrop-blur-md shadow-md" : ""
       }`}
     >
@@ -93,7 +93,7 @@ export default function Navbar() {
               key={item.href}
               href={item.href}
               onClick={item.action}
-              className={`transition-colors duration-300 hover:text-[#c9a86a] ${
+              className={`transition-colors duration-300 hover:text-[#c9a86a] text-[rgb(var(--foreground-rgb))] ${
                 isActive(item.href) ? "text-[#c9a86a]" : ""
               }`}
             >
@@ -106,7 +106,7 @@ export default function Navbar() {
             href="/resume.html"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative overflow-hidden bg-[#c9a86a] text-[#1a1a1a] font-semibold py-2 px-4 rounded-md flex items-center group hover:shadow-lg transition-all duration-300"
+            className="relative overflow-hidden bg-[#c9a86a] text-[rgb(var(--background-rgb))] font-semibold py-2 px-4 rounded-md flex items-center group hover:shadow-lg transition-all duration-300"
             onClick={() => {
               // Analytics tracking could go here
               console.log("Resume viewed")
@@ -114,7 +114,7 @@ export default function Navbar() {
           >
             <span className="mr-2">Resume</span>
             <Download size={16} className="animate-bounce" />
-            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#1a1a1a] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[rgb(var(--background-rgb))] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
           </a>
         </div>
 
@@ -125,13 +125,13 @@ export default function Navbar() {
             href="/resume.html"
             target="_blank"
             rel="noopener noreferrer"
-            className="mr-4 bg-[#c9a86a] text-[#1a1a1a] font-semibold py-1.5 px-3 rounded-md flex items-center"
+            className="mr-4 bg-[#c9a86a] text-[rgb(var(--background-rgb))] font-semibold py-1.5 px-3 rounded-md flex items-center"
             aria-label="View Resume"
           >
             <Download size={16} />
           </a>
 
-          <button onClick={toggleMenu} className="focus:outline-none">
+          <button onClick={toggleMenu} className="focus:outline-none text-[rgb(var(--foreground-rgb))]">
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
@@ -152,7 +152,7 @@ export default function Navbar() {
                     setIsMenuOpen(false)
                   }
                 }}
-                className={`transition-colors duration-300 hover:text-[#c9a86a] ${
+                className={`transition-colors duration-300 hover:text-[#c9a86a] text-[rgb(var(--foreground-rgb))] ${
                   isActive(item.href) ? "text-[#c9a86a]" : ""
                 }`}
               >
@@ -165,7 +165,7 @@ export default function Navbar() {
               href="/resume.html"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#c9a86a] text-[#1a1a1a] font-semibold py-2 px-4 rounded-md flex items-center justify-center"
+              className="bg-[#c9a86a] text-[rgb(var(--background-rgb))] font-semibold py-2 px-4 rounded-md flex items-center justify-center"
             >
               <span className="mr-2">View Resume</span>
               <Download size={16} />

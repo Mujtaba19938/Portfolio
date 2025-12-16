@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Linkedin, Facebook, Mail, Phone, Sun, Moon } from "lucide-react"
+import { Linkedin, Facebook, Mail, Phone, Sun, Moon, Github } from "lucide-react"
 import { useTheme } from "@/components/theme-provider"
 
 export default function Footer() {
@@ -23,6 +23,13 @@ export default function Footer() {
       url: "https://facebook.com/mujtaba.khanani",
       color: "#1877F2",
       label: "Facebook",
+    },
+    {
+      id: "github",
+      icon: <Github size={20} />,
+      url: "https://github.com/Mujtaba19938",
+      color: "#333",
+      label: "GitHub",
     },
     {
       id: "whatsapp",

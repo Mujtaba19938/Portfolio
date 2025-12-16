@@ -44,6 +44,16 @@ export default function TechStack() {
       icon: "/vscode-logo.png",
       fallbackIcon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
     },
+    {
+      name: "Flutter",
+      icon: "/flutter-tech.png",
+      fallbackIcon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
+    },
+    {
+      name: "Next.js",
+      icon: "/nextjs-logo.png",
+      fallbackIcon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+    },
   ]
 
   const handleImageError = (techName: string) => {

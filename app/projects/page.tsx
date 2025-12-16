@@ -28,7 +28,7 @@ export default function Projects() {
   const router = useRouter()
 
   // Define the fixed technologies from the image
-  const technologies = ["HTML&CSS", "Javascript", "UI/UX", "Word Press", "React-JS", ".Net", "Vite-JS"]
+  const technologies = ["HTML&CSS", "Javascript", "UI/UX", "Word Press", "React-JS", ".Net", "Vite-JS", "Flutter"]
 
   useEffect(() => {
     // In a real app, you would fetch this data from an API
@@ -173,6 +173,26 @@ export default function Projects() {
         githubLink: "https://ai-agent-git-master-mujtabas-projects-5f43cf3d.vercel.app",
       },
       {
+        id: 23,
+        title: "Purple.design",
+        description: "A minimal hero landing page with a neural canvas — crisp, elegant, and quietly expressive. Built with React, Three.js, and a custom CPPN shader.",
+        image: "/Screenshot 2025-12-07 174705.png",
+        tags: ["React-JS"],
+        categories: ["Website", "Design"],
+        demoLink: "https://purple-web-xi.vercel.app",
+        githubLink: "#",
+      },
+      {
+        id: 24,
+        title: "Watchhub",
+        description: "A premium luxury watch e-commerce mobile app with elegant dark theme, featuring timepiece browsing, wishlist, and shopping cart functionality.",
+        image: "/Screenshot 2025-12-14 120823.png",
+        tags: ["Flutter"],
+        categories: ["Mobile App", "E-commerce"],
+        demoLink: "#",
+        githubLink: "#",
+      },
+      {
         id: 18,
         title: "Reboost Social Media Agency",
         description: "A modern social media management and creative agency website with dark theme design and interactive elements.",
@@ -247,7 +267,7 @@ export default function Projects() {
   }
 
   return (
-    <div className="min-h-screen bg-[#1a1a1a] text-white font-poppins">
+    <div className="min-h-screen bg-[rgb(var(--background-rgb))] text-[rgb(var(--foreground-rgb))] font-poppins transition-colors duration-300">
       <Navbar />
 
       {/* Projects Section */}
@@ -261,7 +281,7 @@ export default function Projects() {
           >
             <h1 className="text-3xl md:text-5xl font-bold text-[#c9a86a] mb-4">Projects</h1>
             <div className="w-20 h-1 bg-[#c9a86a] mx-auto mb-6"></div>
-            <p className="text-gray-300 max-w-2xl mx-auto">
+            <p className="text-[rgb(var(--foreground-rgb))] opacity-70 max-w-2xl mx-auto">
               Here are some of my recent projects. Each project is built with a focus on performance, user experience,
               and clean code.
             </p>
@@ -273,7 +293,9 @@ export default function Projects() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-300 ${
-                activeFilter === "All" ? "bg-[#c9a86a] text-[#1a1a1a]" : "bg-[#252525] text-white hover:bg-[#333]"
+                activeFilter === "All"
+                  ? "bg-[#c9a86a] text-[rgb(var(--background-rgb))]"
+                  : "bg-card border border-[rgb(var(--card-border))] text-[rgb(var(--foreground-rgb))] hover:opacity-80"
               }`}
               onClick={() => handleFilterChange("All")}
             >
@@ -286,7 +308,9 @@ export default function Projects() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-300 ${
-                  activeFilter === tech ? "bg-[#c9a86a] text-[#1a1a1a]" : "bg-[#252525] text-white hover:bg-[#333]"
+                  activeFilter === tech
+                    ? "bg-[#c9a86a] text-[rgb(var(--background-rgb))]"
+                    : "bg-card border border-[rgb(var(--card-border))] text-[rgb(var(--foreground-rgb))] hover:opacity-80"
                 }`}
                 onClick={() => handleFilterChange(tech)}
               >
@@ -307,7 +331,7 @@ export default function Projects() {
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.8 }}
                     transition={{ duration: 0.5 }}
-                    className="bg-[#252525] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group cursor-pointer"
+                    className="bg-card border border-[rgb(var(--card-border))] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group cursor-pointer"
                     onClick={() => navigateToProject(project.id)}
                   >
                     <div className="overflow-hidden">
@@ -326,7 +350,8 @@ export default function Projects() {
                       project.id === 17 ||
                       project.id === 18 ||
                       project.id === 19 ||
-                      project.id === 22 ? (
+                      project.id === 22 ||
+                      project.id === 23 ? (
                         // Special handling for projects with live demos
                         <div
                           className="relative w-full h-64 cursor-pointer"
@@ -339,7 +364,7 @@ export default function Projects() {
                             className="object-cover transition-transform duration-500 group-hover:scale-110"
                           />
                           <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center opacity-0 hover:opacity-100">
-                            <span className="bg-[#c9a86a] text-[#1a1a1a] px-4 py-2 rounded-md font-semibold">
+                            <span className="bg-[#c9a86a] text-[rgb(var(--background-rgb))] px-4 py-2 rounded-md font-semibold">
                               View Live Site
                             </span>
                           </div>
@@ -357,17 +382,17 @@ export default function Projects() {
                     </div>
                     <div className="p-6">
                       <h3 className="text-xl font-bold mb-2 text-[#c9a86a]">{project.title}</h3>
-                      <p className="text-gray-300 mb-4">{project.description}</p>
+                      <p className="text-[rgb(var(--foreground-rgb))] opacity-70 mb-4">{project.description}</p>
                       <div className="flex flex-wrap gap-2 mb-4">
                         {project.tags.map((tag, i) => (
-                          <span key={i} className="text-xs bg-[#333333] text-[#c9a86a] px-3 py-1 rounded-full">
+                          <span key={i} className="text-xs bg-[rgb(var(--card-border))] text-[#c9a86a] px-3 py-1 rounded-full">
                             #{tag}
                           </span>
                         ))}
                       </div>
                       <div className="flex space-x-4">
                         <button
-                          className="text-white hover:text-[#c9a86a] transition-colors duration-300"
+                          className="text-[rgb(var(--foreground-rgb))] hover:text-[#c9a86a] transition-colors duration-300"
                           onClick={(e) => {
                             e.stopPropagation()
                             window.open(project.githubLink, "_blank", "noopener,noreferrer")
@@ -385,7 +410,7 @@ export default function Projects() {
                   animate={{ opacity: 1 }}
                   className="col-span-full text-center py-12"
                 >
-                  <h3 className="text-xl text-gray-300">No projects found matching the selected filter.</h3>
+                  <h3 className="text-xl text-[rgb(var(--foreground-rgb))] opacity-70">No projects found matching the selected filter.</h3>
                   <button onClick={() => handleFilterChange("All")} className="mt-4 text-[#c9a86a] hover:underline">
                     Show all projects
                   </button>
