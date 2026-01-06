@@ -193,6 +193,16 @@ export default function Projects() {
         githubLink: "https://fin-dash-landing-page.vercel.app/",
       },
       {
+        id: 26,
+        title: "Rovoxa AI-Chatbot",
+        description: "An intelligent AI chatbot platform that engages, converts, and supports users 24/7 with smart conversational capabilities.",
+        image: "/Screenshot 2026-01-06 142811.png",
+        tags: ["React-JS"],
+        categories: ["Web App", "AI"],
+        demoLink: "https://rovoxa-tau.vercel.app/",
+        githubLink: "https://rovoxa-tau.vercel.app/",
+      },
+      {
         id: 24,
         title: "Watchhub",
         description: "A premium luxury watch e-commerce mobile app with elegant dark theme, featuring timepiece browsing, wishlist, and shopping cart functionality.",
@@ -362,7 +372,8 @@ export default function Projects() {
                       project.id === 19 ||
                       project.id === 22 ||
                       project.id === 23 ||
-                      project.id === 25 ? (
+                      project.id === 25 ||
+                      project.id === 26 ? (
                         // Special handling for projects with live demos
                         <div
                           className="relative w-full h-64 cursor-pointer"

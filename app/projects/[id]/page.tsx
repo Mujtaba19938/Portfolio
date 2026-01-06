@@ -513,6 +513,38 @@ export default function ProjectDetail() {
         ],
       },
       {
+        id: 26,
+        title: "Rovoxa AI-Chatbot",
+        description: "An intelligent AI chatbot platform that engages, converts, and supports users 24/7 with smart conversational capabilities.",
+        image: "/Screenshot 2026-01-06 142811.png",
+        tags: ["React-JS"],
+        categories: ["Web App", "AI"],
+        demoLink: "https://rovoxa-tau.vercel.app/",
+        githubLink: "https://rovoxa-tau.vercel.app/",
+        longDescription:
+          "Rovoxa is a modern AI chatbot platform designed to provide intelligent, conversational experiences for users. The platform features a sleek dark-themed interface with vibrant green accents, offering 24/7 engagement, conversion optimization, and user support. Built with React and modern web technologies, Rovoxa delivers a seamless chatbot experience that helps businesses automate customer interactions and improve user engagement.",
+        features: [
+          "Intelligent AI-powered conversational interface",
+          "24/7 automated user engagement and support",
+          "Modern dark theme with vibrant green accents",
+          "Responsive design for desktop and mobile devices",
+          "Free trial and demo options for users",
+          "Feature-rich navigation with blog and pricing sections",
+          "Clean, minimalist UI with futuristic aesthetic",
+          "Real-time chat interface with status indicators",
+        ],
+        technologies: [
+          "React.js for component-based UI development",
+          "Next.js for server-side rendering and routing",
+          "Tailwind CSS for modern styling",
+          "AI/ML integration for chatbot intelligence",
+          "Vercel for hosting and deployment",
+          "Modern JavaScript (ES6+) for enhanced functionality",
+          "Responsive design principles",
+          "Real-time communication capabilities",
+        ],
+      },
+      {
         id: 24,
         title: "Watchhub",
         description: "A premium luxury watch e-commerce mobile app with elegant dark theme, featuring timepiece browsing, wishlist, and shopping cart functionality.",
@@ -763,7 +795,8 @@ export default function ProjectDetail() {
                 project.id === 19 ||
                 project.id === 22 ||
                 project.id === 23 ||
-                project.id === 25 ? (
+                project.id === 25 ||
+                project.id === 26 ? (
                   // Special handling for projects with live demos
                   <a
                     href={project.demoLink}
