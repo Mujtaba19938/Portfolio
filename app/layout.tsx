@@ -17,6 +17,11 @@ export const metadata: Metadata = {
   description: "Portfolio website of Mujtaba Khanani, a full-stack web developer",
   manifest: "/manifest.json",
   generator: "v0.dev",
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
 }
 
 export default function RootLayout({
@@ -27,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" type="image/png" />
         <meta name="theme-color" content="#1a1a1a" />
       </head>
       <body className={`${poppins.variable} font-poppins`}>
