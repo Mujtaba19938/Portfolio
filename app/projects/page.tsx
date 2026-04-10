@@ -252,6 +252,46 @@ export default function Projects() {
         demoLink: "#",
         githubLink: "#",
       },
+      {
+        id: 27,
+        title: "Salesflow",
+        description: "An AI-powered sales management platform that combines innovation with insight to revolutionize the future of sales — powerful, yet simple, and completely free.",
+        image: "/salesflow.png",
+        tags: ["React-JS"],
+        categories: ["Web App", "AI"],
+        demoLink: "https://ai-sales-manager-six.vercel.app/",
+        githubLink: "#",
+      },
+      {
+        id: 28,
+        title: "FlowTask",
+        description: "Organize your life with AI intelligence. FlowTask uses AI to break down complex tasks, suggest priorities, and keep you in a state of productive flow.",
+        image: "/flowtask.png",
+        tags: ["React-JS"],
+        categories: ["Web App", "AI"],
+        demoLink: "https://flow-task-ai-powerd-todo.vercel.app/",
+        githubLink: "#",
+      },
+      {
+        id: 29,
+        title: "Archistry",
+        description: "A premium real estate landing page highlighting architectural elegance, property portfolios, and modern home search solutions.",
+        image: "/archistry.png",
+        tags: ["Vite-JS"],
+        categories: ["Website", "Real Estate"],
+        demoLink: "https://archistry-real-estate.vercel.app/",
+        githubLink: "#",
+      },
+      {
+        id: 30,
+        title: "Hulax",
+        description: "A modern renewable energy landing page showcasing comprehensive clean energy solutions, sustainability metrics, and solar installations.",
+        image: "/hulax.png",
+        tags: ["Vite-JS"],
+        categories: ["Website", "Environment"],
+        demoLink: "https://hulax-renewable-energy.vercel.app/",
+        githubLink: "#",
+      },
     ]
 
     setProjects(projectsData)
@@ -373,7 +413,11 @@ export default function Projects() {
                       project.id === 22 ||
                       project.id === 23 ||
                       project.id === 25 ||
-                      project.id === 26 ? (
+                      project.id === 26 ||
+                      project.id === 27 ||
+                      project.id === 28 ||
+                      project.id === 29 ||
+                      project.id === 30 ? (
                         // Special handling for projects with live demos
                         <div
                           className="relative w-full h-64 cursor-pointer"
@@ -439,6 +483,118 @@ export default function Projects() {
                 </motion.div>
               )}
             </AnimatePresence>
+          </div>
+        </div>
+      </section>
+
+      {/* Web-Apps Section */}
+      <section className="py-20 relative overflow-hidden">
+        {/* Subtle background pattern */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{
+          backgroundImage: `radial-gradient(circle at 1px 1px, rgb(var(--foreground-rgb)) 1px, transparent 0)`,
+          backgroundSize: '40px 40px'
+        }}></div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-16"
+          >
+            {/* Section header with accent line */}
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-12 h-[3px] rounded-full bg-gradient-to-r from-[#c9a86a] to-[#e8d5a3]"></div>
+              <span className="text-sm font-semibold tracking-[0.2em] uppercase text-[#c9a86a]">Featured Category</span>
+            </div>
+            <h2 className="text-3xl md:text-5xl font-bold text-[rgb(var(--foreground-rgb))] mb-3">
+              Web-<span className="text-[#c9a86a]">Apps</span>
+            </h2>
+            <p className="text-[rgb(var(--foreground-rgb))] opacity-60 max-w-xl text-base md:text-lg">
+              Interactive web applications built with modern frameworks — from AI-powered tools to utility apps and games.
+            </p>
+          </motion.div>
+
+          {/* Web Apps Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projects
+              .filter((project) => project.categories.includes("Web App"))
+              .map((project, index) => (
+                <motion.div
+                  key={project.id}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="group cursor-pointer relative"
+                  onClick={() => navigateToProject(project.id)}
+                >
+                  {/* Card */}
+                  <div className="bg-card border border-[rgb(var(--card-border))] rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                    {/* Image container with overlay */}
+                    <div className="relative overflow-hidden h-56">
+                      <Image
+                        src={project.image || "/placeholder.svg"}
+                        alt={project.title}
+                        fill
+                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                      />
+                      {/* Gradient overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                      
+                      {/* Hover action button */}
+                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
+                        <motion.span
+                          initial={{ scale: 0.8 }}
+                          whileHover={{ scale: 1.05 }}
+                          className="bg-[#c9a86a] text-[rgb(var(--background-rgb))] px-5 py-2.5 rounded-lg font-semibold text-sm shadow-lg backdrop-blur-sm cursor-pointer"
+                          onClick={(e) => openProjectDemo(e, project.demoLink)}
+                        >
+                          View Live ↗
+                        </motion.span>
+                      </div>
+
+                      {/* Category badges */}
+                      <div className="absolute top-3 left-3 flex gap-2">
+                        {project.categories.map((cat, i) => (
+                          <span
+                            key={i}
+                            className="text-[10px] font-semibold tracking-wider uppercase bg-black/50 backdrop-blur-md text-white px-2.5 py-1 rounded-full"
+                          >
+                            {cat}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Content */}
+                    <div className="p-6">
+                      {/* Top accent bar */}
+                      <div className="w-8 h-[3px] rounded-full bg-gradient-to-r from-[#c9a86a] to-[#e8d5a3] mb-4 group-hover:w-16 transition-all duration-500"></div>
+                      
+                      <h3 className="text-lg font-bold mb-2 text-[rgb(var(--foreground-rgb))] group-hover:text-[#c9a86a] transition-colors duration-300">
+                        {project.title}
+                      </h3>
+                      <p className="text-[rgb(var(--foreground-rgb))] opacity-60 text-sm mb-4 line-clamp-2">
+                        {project.description}
+                      </p>
+
+                      {/* Tech tags */}
+                      <div className="flex flex-wrap gap-2">
+                        {project.tags.map((tag, i) => (
+                          <span
+                            key={i}
+                            className="text-xs font-medium bg-[rgba(var(--accent-color),0.1)] text-[#c9a86a] px-3 py-1 rounded-full border border-[rgba(var(--accent-color),0.2)]"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
           </div>
         </div>
       </section>
