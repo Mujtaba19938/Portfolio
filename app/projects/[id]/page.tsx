@@ -722,6 +722,42 @@ export default function ProjectDetail() {
           "Performance optimization and lazy loading",
         ],
       },
+      {
+        id: 31,
+        title: "A.R.I.A",
+        description:
+          "Automated Receivables Intelligence Agent — an AI agent that manages AR aging, generates automated follow-up drafts, and recommends collection actions for overdue invoices.",
+        image: "/aria.png",
+        tags: ["Agentic Ai"],
+        categories: ["Web App", "AI"],
+        demoLink: "https://a-r-i-a-frontend.vercel.app/",
+        githubLink: "#",
+        longDescription:
+          "A.R.I.A (Automated Receivables Intelligence Agent) is an agentic AI platform for accounts receivable collections. Users upload an AR aging file (CSV or XLSX) and the agent analyzes overdue invoices, distributes balances across aging buckets, and automatically generates personalized follow-up communication drafts using a locally hosted LLM via Ollama. The dashboard surfaces total and overdue invoice counts, outstanding overdue volume, aging bucket allocations, and recommended action items — with a human-in-the-loop approval flow so every AI-generated draft is reviewed before it goes out.",
+        features: [
+          "AR aging file upload with CSV and XLSX support",
+          "AI-generated follow-up communication drafts via local Ollama",
+          "Collections dashboard with invoice and overdue KPIs",
+          "Aging buckets showing overdue distribution by days past due",
+          "Recommended action items for overdue balances",
+          "Severity-based escalation for high-risk clients",
+          "Human-in-the-loop approval workflow for AI drafts",
+          "Customer and agent management modules",
+          "Statement storage and verification tools",
+          "Light and dark mode with a clean, modern UI",
+        ],
+        technologies: [
+          "Agentic AI workflow for autonomous receivables follow-up",
+          "Locally hosted LLM via Ollama for draft generation",
+          "React.js for component-based UI development",
+          "Modern JavaScript (ES6+) for enhanced functionality",
+          "CSV/XLSX parsing for AR aging data ingestion",
+          "REST API integration between frontend and agent backend",
+          "State management for dashboard and approval flows",
+          "Responsive design for all screen sizes",
+          "Vercel for frontend deployment",
+        ],
+      },
     ]
 
     const id = params?.id
@@ -796,7 +832,8 @@ export default function ProjectDetail() {
                 project.id === 22 ||
                 project.id === 23 ||
                 project.id === 25 ||
-                project.id === 26 ? (
+                project.id === 26 ||
+                project.id === 31 ? (
                   // Special handling for projects with live demos
                   <a
                     href={project.demoLink}

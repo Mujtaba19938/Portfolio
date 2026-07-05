@@ -28,7 +28,7 @@ export default function Projects() {
   const router = useRouter()
 
   // Define the fixed technologies from the image
-  const technologies = ["HTML&CSS", "Javascript", "UI/UX", "Word Press", "React-JS", ".Net", "Vite-JS", "Flutter"]
+  const technologies = ["HTML&CSS", "Javascript", "UI/UX", "Word Press", "React-JS", ".Net", "Vite-JS", "Flutter", "Agentic Ai"]
 
   useEffect(() => {
     // In a real app, you would fetch this data from an API
@@ -283,6 +283,17 @@ export default function Projects() {
         githubLink: "#",
       },
       {
+        id: 31,
+        title: "A.R.I.A",
+        description:
+          "Automated Receivables Intelligence Agent — an AI agent that manages AR aging, generates automated follow-up drafts, and recommends collection actions for overdue invoices.",
+        image: "/aria.png",
+        tags: ["Agentic Ai"],
+        categories: ["Web App", "AI"],
+        demoLink: "https://a-r-i-a-frontend.vercel.app/",
+        githubLink: "#",
+      },
+      {
         id: 30,
         title: "Hulax",
         description: "A modern renewable energy landing page showcasing comprehensive clean energy solutions, sustainability metrics, and solar installations.",
@@ -417,7 +428,8 @@ export default function Projects() {
                       project.id === 27 ||
                       project.id === 28 ||
                       project.id === 29 ||
-                      project.id === 30 ? (
+                      project.id === 30 ||
+                      project.id === 31 ? (
                         // Special handling for projects with live demos
                         <div
                           className="relative w-full h-64 cursor-pointer"
