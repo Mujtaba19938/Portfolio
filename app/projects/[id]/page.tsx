@@ -758,6 +758,42 @@ export default function ProjectDetail() {
           "Vercel for frontend deployment",
         ],
       },
+      {
+        id: 32,
+        title: "Quartar-Real-Estate-Dijango",
+        description:
+          "A real estate agency platform built with Django, featuring property listings, search, and enquiry workflows to help users find their dream house.",
+        image: "/quartar-real-estate.png",
+        tags: ["Dijango"],
+        categories: ["Website", "Real Estate"],
+        demoLink: "https://quartar-real-estate-dijango.vercel.app/",
+        githubLink: "#",
+        longDescription:
+          "Quartar is a full-featured real estate agency platform built with Django. It presents property listings with a clean, modern design and guides visitors from browsing to enquiry. The site includes property pages, news and content sections, user account access, a listing cart, and an add-listing flow for property owners. The hero slider, enquiry call-to-action, and structured navigation make it easy for users to find their dream house, while the Django backend handles listings, users, and enquiries.",
+        features: [
+          "Property listings with detailed property pages",
+          "Hero slider showcasing featured properties",
+          "Make An Enquiry flow for interested buyers",
+          "Add Listing functionality for property owners",
+          "Property search and category navigation",
+          "News and blog section for real estate content",
+          "User account and login access",
+          "Listing cart for saved properties",
+          "Contact page with agency details",
+          "Fully responsive, modern UI",
+        ],
+        technologies: [
+          "Django (Python) for backend development",
+          "Django templates for server-rendered pages",
+          "Python for business logic and data handling",
+          "HTML5 and CSS3 for structure and styling",
+          "JavaScript for interactive components and sliders",
+          "Bootstrap for responsive layout",
+          "Relational database for listings and users",
+          "Django admin for content management",
+          "Vercel for deployment",
+        ],
+      },
     ]
 
     const id = params?.id
@@ -833,7 +869,8 @@ export default function ProjectDetail() {
                 project.id === 23 ||
                 project.id === 25 ||
                 project.id === 26 ||
-                project.id === 31 ? (
+                project.id === 31 ||
+                project.id === 32 ? (
                   // Special handling for projects with live demos
                   <a
                     href={project.demoLink}

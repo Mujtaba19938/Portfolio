@@ -28,7 +28,7 @@ export default function Projects() {
   const router = useRouter()
 
   // Define the fixed technologies from the image
-  const technologies = ["HTML&CSS", "Javascript", "UI/UX", "Word Press", "React-JS", ".Net", "Vite-JS", "Flutter", "Agentic Ai"]
+  const technologies = ["HTML&CSS", "Javascript", "UI/UX", "Word Press", "React-JS", ".Net", "Vite-JS", "Flutter", "Agentic Ai", "Dijango"]
 
   useEffect(() => {
     // In a real app, you would fetch this data from an API
@@ -294,6 +294,17 @@ export default function Projects() {
         githubLink: "#",
       },
       {
+        id: 32,
+        title: "Quartar-Real-Estate-Dijango",
+        description:
+          "A real estate agency platform built with Django, featuring property listings, search, and enquiry workflows to help users find their dream house.",
+        image: "/quartar-real-estate.png",
+        tags: ["Dijango"],
+        categories: ["Website", "Real Estate"],
+        demoLink: "https://quartar-real-estate-dijango.vercel.app/",
+        githubLink: "#",
+      },
+      {
         id: 30,
         title: "Hulax",
         description: "A modern renewable energy landing page showcasing comprehensive clean energy solutions, sustainability metrics, and solar installations.",
@@ -429,7 +440,8 @@ export default function Projects() {
                       project.id === 28 ||
                       project.id === 29 ||
                       project.id === 30 ||
-                      project.id === 31 ? (
+                      project.id === 31 ||
+                      project.id === 32 ? (
                         // Special handling for projects with live demos
                         <div
                           className="relative w-full h-64 cursor-pointer"
