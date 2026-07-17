@@ -103,13 +103,12 @@ export default function Navbar() {
 
           {/* Resume Download Button */}
           <a
-            href="/resume.html"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/resume.pdf"
+            download="Mujtaba_Bashir_Khanani_Resume.pdf"
             className="relative overflow-hidden bg-[#c9a86a] text-[rgb(var(--background-rgb))] font-semibold py-2 px-4 rounded-md flex items-center group hover:shadow-lg transition-all duration-300"
             onClick={() => {
               // Analytics tracking could go here
-              console.log("Resume viewed")
+              console.log("Resume downloaded")
             }}
           >
             <span className="mr-2">Resume</span>
@@ -122,11 +121,10 @@ export default function Navbar() {
         <div className="md:hidden flex items-center">
           {/* Mobile Resume Button */}
           <a
-            href="/resume.html"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/resume.pdf"
+            download="Mujtaba_Bashir_Khanani_Resume.pdf"
             className="mr-4 bg-[#c9a86a] text-[rgb(var(--background-rgb))] font-semibold py-1.5 px-3 rounded-md flex items-center"
-            aria-label="View Resume"
+            aria-label="Download Resume"
           >
             <Download size={16} />
           </a>
@@ -162,12 +160,11 @@ export default function Navbar() {
 
             {/* Full Resume Button in Mobile Menu */}
             <a
-              href="/resume.html"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/resume.pdf"
+              download="Mujtaba_Bashir_Khanani_Resume.pdf"
               className="bg-[#c9a86a] text-[rgb(var(--background-rgb))] font-semibold py-2 px-4 rounded-md flex items-center justify-center"
             >
-              <span className="mr-2">View Resume</span>
+              <span className="mr-2">Download Resume</span>
               <Download size={16} />
             </a>
           </div>

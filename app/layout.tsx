@@ -4,6 +4,7 @@ import { Poppins } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import PreloaderWrapper from "@/components/preloader-wrapper"
+import UserCursor from "@/components/user-cursor"
 import Script from "next/script"
 
 const poppins = Poppins({
@@ -39,6 +40,7 @@ export default function RootLayout({
         <ThemeProvider>
           <PreloaderWrapper>{children}</PreloaderWrapper>
         </ThemeProvider>
+        <UserCursor />
         <Script src="/register-sw.js" strategy="afterInteractive" />
       </body>
     </html>
